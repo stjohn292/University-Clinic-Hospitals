@@ -25,8 +25,32 @@ namespace UniversityClinicHospitals
 
         public void PaySalary()
         {
-            EmpBeenPaid = true;
+            if (EmpBeenPaid == false)
+
+            {
+                Console.WriteLine("All employees have been paid.");
+                EmpBeenPaid = true;
+            }
+            else
+            {
+                Console.WriteLine("You have already paid all Employees.");
+            }
         }
 
+        public void DisplayEmployeeInformation(List<Employee> employees)
+        {
+            string paid;
+            if (EmpBeenPaid == true)
+            { paid = "yes"; }
+            else
+            { paid = "no"; }
+
+            Console.WriteLine("Name" + "Number" + "Paid");
+
+            foreach (Employee employee in employees)
+            {
+                Console.WriteLine(EmpName + " " + EmpNumber + " " + paid );
+            }
+        }
     }
 }
