@@ -8,12 +8,17 @@ namespace UniversityClinicHospitals
         static void Main(string[] args)
         {
             List<Employee> employees = new List<Employee>();
-            {
-                new Doctor("Phil", 111, "Brain");
-                new Nurse("Jackie", 112, 50);
-                new Receptionist("Cheryl/Carol/Crystal", 112, true);
-                new Janitor("Will", 113, false);
-            }
+            
+            Doctor Phil = new Doctor("Phil", 111, "Brain");
+            Nurse Jackie = new Nurse("Jackie", 112, 50);
+            Receptionist Cheryl = new Receptionist("Cheryl/Carol/Crystal", 112, true);
+            Janitor Will = new Janitor("Will", 113, false);
+
+            employees.Add(Phil);
+            employees.Add(Jackie);
+            employees.Add(Cheryl);
+            employees.Add(Will);
+            
 
             int userInputAsInt = 0;
             do
@@ -35,16 +40,25 @@ namespace UniversityClinicHospitals
                 switch (userInputAsInt)
                 {
                     case 1:
-                        Employee.DisplayEmployeeInformation();
+                        {
+                            Console.WriteLine("Name:" + "I.D." + "Additional Info");
+                            Phil.DisplayInfo();
+                            Jackie.DisplayInfo();
+                            Cheryl.DisplayInfo();
+                            Will.DisplayInfo();
+                        }
                         break;
                     case 2:
-                        PayAllEmployees();
+                        foreach (Employee employee in employees)
+                        {
+                            employee.PaySalary();
+                        }
                         break;
                     case 3:
                         AssignTasks();
                         break;
                     default:
-                        Console.WriteLine("Please choose an option from the menuu.");
+                        Console.WriteLine("Please choose an option from the menu.");
                         break;
                 }
             } while (userInputAsInt < 1 || userInputAsInt > 3); 

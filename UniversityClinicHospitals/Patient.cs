@@ -14,5 +14,6 @@ namespace UniversityClinicHospitals
             HealthLevel = 10;
         }
 
+
     }
 }

@@ -13,5 +13,23 @@ namespace UniversityClinicHospitals
             EmpSalary = 40000;
             this.IsSweeping = IsSweeping;
         }
+        public void DisplayInfo()
+        {
+            {
+                string paid;
+                if (EmpBeenPaid == true)
+                { paid = "yes"; }
+                else
+                { paid = "no"; }
+
+                string sweeping;
+                if (IsSweeping = true)
+                { sweeping = "Sweeping"; }
+                else
+                { sweeping = "Not Sweeping"; }
+
+                Console.WriteLine(EmpName + " " + EmpNumber + " " + sweeping + " " + paid);
+                }
+            }
     }
 }

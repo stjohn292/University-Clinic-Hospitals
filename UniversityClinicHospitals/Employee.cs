@@ -19,7 +19,7 @@ namespace UniversityClinicHospitals
         {
             this.EmpName = EmpName;
             this.EmpNumber = EmpNumber;
-            
+
             EmpBeenPaid = false;
         }
 
@@ -37,20 +37,12 @@ namespace UniversityClinicHospitals
             }
         }
 
-        public void DisplayEmployeeInformation(List<Employee> employees)
+        public void AssignTasks()
         {
-            string paid;
-            if (EmpBeenPaid == true)
-            { paid = "yes"; }
-            else
-            { paid = "no"; }
 
-            Console.WriteLine("Name" + "Number" + "Paid");
-
-            foreach (Employee employee in employees)
-            {
-                Console.WriteLine(EmpName + " " + EmpNumber + " " + paid );
-            }
         }
+
+                
+        
     }
 }

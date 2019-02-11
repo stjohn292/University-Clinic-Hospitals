@@ -13,5 +13,17 @@ namespace UniversityClinicHospitals
             EmpSalary = 50000;
             this.NumAssignedPatients = NumAssignedPatients;
         }
+        public void DisplayInfo()
+        {
+            {
+                string paid;
+                if (EmpBeenPaid == true)
+                { paid = "yes"; }
+                else
+                { paid = "no"; }
+
+                Console.WriteLine(EmpName + " " + EmpNumber + " " + NumAssignedPatients + " " + paid);
+                }
+            }
     }
 }

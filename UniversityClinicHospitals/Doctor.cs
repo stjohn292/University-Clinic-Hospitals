@@ -13,5 +13,17 @@ namespace UniversityClinicHospitals
             EmpSalary = 9000;
             this.SpecialtyArea = SpecialtyArea;
         }
+        public void DisplayInfo()
+        {
+            {
+                string paid;
+                if (EmpBeenPaid == true)
+                { paid = "yes"; }
+                else
+                { paid = "no"; }
+
+                Console.WriteLine(EmpName + " " + EmpNumber + " " + SpecialtyArea + " " + paid);
+                }
+            }
     }
 }
