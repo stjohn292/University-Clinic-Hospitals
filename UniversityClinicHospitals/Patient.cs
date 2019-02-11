@@ -4,7 +4,7 @@ using System.Text;
 
 namespace UniversityClinicHospitals
 {
-    public class Patient : Employee
+    public class Patient
     {
         public int BloodLevel { get; set; }
         public int HealthLevel { get; set; }

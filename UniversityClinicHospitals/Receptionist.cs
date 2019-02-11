@@ -14,6 +14,9 @@ namespace UniversityClinicHospitals
             this.OnPhone = OnPhone;
         }
 
+        public override void PaySalary()
+        { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary); }
+
         public void DisplayInfo()
         {
             {

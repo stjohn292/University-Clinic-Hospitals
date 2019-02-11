@@ -23,7 +23,10 @@ namespace UniversityClinicHospitals
             EmpBeenPaid = false;
         }
 
-        public void PaySalary()
+        public virtual void DrawBlood(Patient John)
+        { }
+
+        public virtual void PaySalary()
         {
             if (EmpBeenPaid == false)
 

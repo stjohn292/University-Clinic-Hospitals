@@ -13,6 +13,16 @@ namespace UniversityClinicHospitals
             EmpSalary = 9000;
             this.SpecialtyArea = SpecialtyArea;
         }
+
+        public override void DrawBlood(Patient John)
+        {
+            base.DrawBlood(John);
+            John.BloodLevel = -10;
+        }
+
+        public override void PaySalary()
+        { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary); }
+
         public void DisplayInfo()
         {
             {

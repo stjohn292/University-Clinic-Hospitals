@@ -13,6 +13,10 @@ namespace UniversityClinicHospitals
             EmpSalary = 40000;
             this.IsSweeping = IsSweeping;
         }
+
+        public override void PaySalary()
+        { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary); }
+
         public void DisplayInfo()
         {
             {

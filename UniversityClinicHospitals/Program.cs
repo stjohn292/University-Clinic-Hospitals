@@ -13,6 +13,7 @@ namespace UniversityClinicHospitals
             Nurse Jackie = new Nurse("Jackie", 112, 50);
             Receptionist Cheryl = new Receptionist("Cheryl/Carol/Crystal", 112, true);
             Janitor Will = new Janitor("Will", 113, false);
+            Patient John = new Patient();
 
             employees.Add(Phil);
             employees.Add(Jackie);
@@ -26,7 +27,7 @@ namespace UniversityClinicHospitals
                 Console.WriteLine("/tUniversity Clinic Hostpitals/n/t" +
                     "1. Employee Information/n/t" +
                     "2. Issue Paycheck/n/t" +
-                    "3. Assign Tasks");
+                    "3. Have Nurse or Doctor Draw Blood");
 
                 string userInput = Console.ReadLine();
                 if (char.IsNumber(userInput[0]) && userInput.Length == 1)
@@ -55,7 +56,20 @@ namespace UniversityClinicHospitals
                         }
                         break;
                     case 3:
-                        AssignTasks();
+                        Console.Clear();
+                        Console.WriteLine("/t1. Have Nurse Draw Blood/n/t" +
+                            "2. Have Doctor Draw Blood");
+                        string BloodChoice = Console.ReadLine();
+                        int BloodChoiceAsInt = Convert.ToInt32(BloodChoice);
+                        if (BloodChoiceAsInt == 1)
+                        { Jackie.DrawBlood(John); }
+                        if (BloodChoiceAsInt == 2)
+                        { Phil.DrawBlood(John); }
+                        else
+                        { Console.WriteLine("Please choose 1 or 2.");
+                        }
+
+
                         break;
                     default:
                         Console.WriteLine("Please choose an option from the menu.");
