@@ -20,7 +20,19 @@ namespace UniversityClinicHospitals
         public override void DrawBlood(Patient John)
         {
             base.DrawBlood(John);
-            John.BloodLevel -= 5;
+            John.BloodLevel -= 20;
+            John.HealthLevel -= 10;
+
+            Console.Clear();
+            if (John.BloodLevel >= 0)
+            {
+                Console.WriteLine("You killed the patient.");
+            }
+            else
+            {
+                Console.WriteLine("The patient's blood level is: " + John.BloodLevel + "\n\t");
+                Console.WriteLine("The patient's health level is: " + John.HealthLevel);
+            };
         }
         public void DisplayInfo()
         {

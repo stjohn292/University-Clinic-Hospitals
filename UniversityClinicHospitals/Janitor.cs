@@ -27,7 +27,7 @@ namespace UniversityClinicHospitals
                 { paid = "no"; }
 
                 string sweeping;
-                if (IsSweeping = true)
+                if (IsSweeping == true)
                 { sweeping = "Sweeping"; }
                 else
                 { sweeping = "Not Sweeping"; }

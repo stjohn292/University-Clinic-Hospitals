@@ -26,12 +26,12 @@ namespace UniversityClinicHospitals
         public void DisplayInfo()
         {
             {
-                string paid;
+               string paid;
                 if (EmpBeenPaid == true)
                 { paid = "yes"; }
                 else
                 { paid = "no"; }
-
+                
                 Console.WriteLine(EmpName + " " + EmpNumber + " " + SpecialtyArea + " " + paid);
                 }
             }

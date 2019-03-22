@@ -24,7 +24,9 @@ namespace UniversityClinicHospitals
         }
 
         public virtual void DrawBlood(Patient John)
-        { }
+        {
+            
+        }
 
         public virtual void PaySalary()
         {
