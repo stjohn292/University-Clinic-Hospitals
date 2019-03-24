@@ -10,19 +10,23 @@ namespace UniversityClinicHospitals
 
         public Nurse(string EmpName, int EmpNumber, int NumAssignedPatients)
         {
+            this.EmpName = EmpName;
+            this.EmpNumber = EmpNumber;
             EmpSalary = 50000;
             this.NumAssignedPatients = NumAssignedPatients;
         }
 
-        public override void PaySalary()
-        { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary); }
+        /*public override void PaySalary()
+        { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary); }*/
 
-        public override void DrawBlood(Patient John)
+        public override void DrawBlood(Patient patient)
         {
-            base.DrawBlood(John);
-            John.BloodLevel -= 5;
+            base.DrawBlood(patient);
+            patient.BloodLevel -= 20;
+            patient.HealthLevel -= 10;
         }
-        public void DisplayInfo()
+
+        public override void DisplayInfo()
         {
             {
                 string paid;
