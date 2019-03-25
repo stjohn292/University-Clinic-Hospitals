@@ -16,6 +16,13 @@ namespace UniversityClinicHospitals
             this.OnPhone = OnPhone;
         }
 
+        public Receptionist()
+        {
+            this.EmpName = EmpName;
+            this.EmpNumber = EmpNumber;
+            EmpSalary = 45000;
+            this.OnPhone = OnPhone;
+        }
         /*public override void PaySalary()
         { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary); }*/
 

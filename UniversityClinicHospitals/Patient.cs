@@ -9,9 +9,17 @@ namespace UniversityClinicHospitals
         public string PatientName { get; set; }
         public int BloodLevel { get; set; }
         public int HealthLevel { get; set; }
+
         public Patient(string PatientName)
 
         {   BloodLevel = 100;
+            HealthLevel = 100;
+            this.PatientName = PatientName;
+        }
+
+        public Patient()
+        {
+            BloodLevel = 100;
             HealthLevel = 100;
             this.PatientName = PatientName;
         }

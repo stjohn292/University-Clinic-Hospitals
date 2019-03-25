@@ -16,6 +16,14 @@ namespace UniversityClinicHospitals
             this.NumAssignedPatients = NumAssignedPatients;
         }
 
+        public Nurse()
+        {
+            this.EmpName = EmpName;
+            this.EmpNumber = EmpNumber;
+            EmpSalary = 50000;
+            this.NumAssignedPatients = NumAssignedPatients;
+        }
+
         /*public override void PaySalary()
         { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary); }*/
 

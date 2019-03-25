@@ -16,6 +16,14 @@ namespace UniversityClinicHospitals
             this.IsSweeping = IsSweeping;
         }
 
+        public Janitor()
+        {
+            this.EmpName = EmpName;
+            this.EmpNumber = EmpNumber;
+            EmpSalary = 40000;
+            this.IsSweeping = IsSweeping;
+        }
+
         /*public override void PaySalary()
         { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary); }*/
 

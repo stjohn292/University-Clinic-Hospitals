@@ -16,6 +16,14 @@ namespace UniversityClinicHospitals
             this.SpecialtyArea = SpecialtyArea;
         }
 
+        public Doctor()
+        {
+            this.EmpName = EmpName;
+            this.EmpNumber = EmpNumber;
+            EmpSalary = 9000;
+            this.SpecialtyArea = SpecialtyArea;
+        }
+
         public override void DrawBlood(Patient patient)
         {
             base.DrawBlood(patient);
