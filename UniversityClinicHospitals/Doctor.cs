@@ -10,30 +10,48 @@ namespace UniversityClinicHospitals
         
         public Doctor(string EmpName, int EmpNumber, string SpecialtyArea)
         {
+            this.EmpName = EmpName;
+            this.EmpNumber = EmpNumber;
             EmpSalary = 9000;
             this.SpecialtyArea = SpecialtyArea;
         }
 
-        public override void DrawBlood(Patient John)
+        public Doctor()
         {
-            base.DrawBlood(John);
-            John.BloodLevel = -10;
+            this.EmpName = EmpName;
+            this.EmpNumber = EmpNumber;
+            EmpSalary = 9000;
+            this.SpecialtyArea = SpecialtyArea;
         }
 
-        public override void PaySalary()
-        { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary); }
-
-        public void DisplayInfo()
+        public override void DrawBlood(Patient patient)
         {
-            {
-               string paid;
-                if (EmpBeenPaid == true)
-                { paid = "yes"; }
-                else
-                { paid = "no"; }
-                
-                Console.WriteLine(EmpName + " " + EmpNumber + " " + SpecialtyArea + " " + paid);
-                }
+            base.DrawBlood(patient);
+            patient.BloodLevel -= 100;
+            patient.HealthLevel -= 100;
+        }
+
+        /*public override void PaySalary()
+        {
+            if (EmpBeenPaid == false)
+            { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary);
+                EmpBeenPaid = true;
+
             }
+            else
+            { Console.WriteLine(EmpName + "was already paid."); }
+        }*/
+
+        public override void DisplayInfo()
+        {
+           string paid;
+           if (EmpBeenPaid == true)
+           { paid = "yes"; }
+           else
+           { paid = "no"; }
+            
+           Console.WriteLine(EmpName + " " + EmpNumber + " " + SpecialtyArea + " " + paid);
+        }
+            
     }
 }

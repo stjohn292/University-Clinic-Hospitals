@@ -10,14 +10,23 @@ namespace UniversityClinicHospitals
 
         public Receptionist(string EmpName, int EmpNumber, bool OnPhone)
         {
+            this.EmpName = EmpName;
+            this.EmpNumber = EmpNumber;
             EmpSalary = 45000;
             this.OnPhone = OnPhone;
         }
 
-        public override void PaySalary()
-        { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary); }
+        public Receptionist()
+        {
+            this.EmpName = EmpName;
+            this.EmpNumber = EmpNumber;
+            EmpSalary = 45000;
+            this.OnPhone = OnPhone;
+        }
+        /*public override void PaySalary()
+        { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary); }*/
 
-        public void DisplayInfo()
+        public override void DisplayInfo()
         {
             {
                 string paid;

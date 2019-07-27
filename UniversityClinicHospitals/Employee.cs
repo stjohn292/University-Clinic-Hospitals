@@ -15,39 +15,38 @@ namespace UniversityClinicHospitals
         {
             EmpBeenPaid = false;
         }
-        public Employee(string EmpName, int EmpNumber)
+        /*public Employee(string EmpName, int EmpNumber)
         {
             this.EmpName = EmpName;
             this.EmpNumber = EmpNumber;
 
             EmpBeenPaid = false;
-        }
+        }*/
 
-        public virtual void DrawBlood(Patient John)
+        public virtual void DrawBlood(Patient patient)
         {
-            
+            Console.Clear();
+            if (patient.BloodLevel >= 0)
+            { Console.WriteLine(EmpName + " " + "has drawn blood from the patient," + " " + patient.PatientName + ".\n"); }
+
+            else
+            { Console.WriteLine("\t" + patient.PatientName + " " + "is dead."); };
+                                       
+
         }
 
-        public virtual void PaySalary()
+        //public abstract void PaySalary();
+        public void PaySalary()
         {
             if (EmpBeenPaid == false)
-
             {
-                Console.WriteLine("All employees have been paid.");
+                Console.WriteLine("\t" + EmpName + " " + "has been paid" + "  $" + EmpSalary);
                 EmpBeenPaid = true;
             }
             else
-            {
-                Console.WriteLine("You have already paid all Employees.");
-            }
+            { Console.WriteLine("\t" + EmpName + " " + "was already paid."); }
         }
 
-        public void AssignTasks()
-        {
-
-        }
-
-                
-        
+        public abstract void DisplayInfo();
     }
 }
