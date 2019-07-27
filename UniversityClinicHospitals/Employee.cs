@@ -32,6 +32,7 @@ namespace UniversityClinicHospitals
             else
             { Console.WriteLine("\t" + patient.PatientName + " " + "is dead."); };
                                        
+
         }
 
         //public abstract void PaySalary();

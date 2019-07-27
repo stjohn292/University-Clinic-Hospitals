@@ -36,6 +36,7 @@ namespace UniversityClinicHospitals
             if (EmpBeenPaid == false)
             { Console.WriteLine(EmpName + " " + "has been paid" + "  $" + EmpSalary);
                 EmpBeenPaid = true;
+
             }
             else
             { Console.WriteLine(EmpName + "was already paid."); }

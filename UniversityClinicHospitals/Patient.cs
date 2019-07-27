@@ -6,9 +6,11 @@ namespace UniversityClinicHospitals
 {
     public class Patient
     {
+
         public string PatientName { get; set; }
         public int BloodLevel { get; set; }
         public int HealthLevel { get; set; }
+        public bool Alive { get; set; }
 
         public Patient(string PatientName)
 
@@ -33,6 +35,7 @@ namespace UniversityClinicHospitals
             }
             else
             { Console.WriteLine("\n\t" + PatientName + " " + "is dead."); }
+
         }
 
 

@@ -32,6 +32,7 @@ namespace UniversityClinicHospitals
             base.DrawBlood(patient);
             patient.BloodLevel -= 20;
             patient.HealthLevel -= 10;
+
         }
 
         public override void DisplayInfo()

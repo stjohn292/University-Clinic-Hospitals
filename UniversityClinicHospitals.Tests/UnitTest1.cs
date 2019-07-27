@@ -3,6 +3,7 @@ using Xunit;
 
 namespace UniversityClinicHospitals.Tests
 {
+
     public class DoctorTests
 
     {
@@ -219,6 +220,7 @@ namespace UniversityClinicHospitals.Tests
             receptionist.PaySalary();
             Assert.True(receptionist.EmpBeenPaid);
         }
+
 
     }
 }

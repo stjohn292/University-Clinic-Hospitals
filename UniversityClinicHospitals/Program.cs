@@ -22,6 +22,7 @@ namespace UniversityClinicHospitals
             Janitor Will = new Janitor("Will", 113, false);
             Patient patient = new Patient("John");
 
+
             employees.Add(Phil);
             employees.Add(Jackie);
             employees.Add(Cheryl);
@@ -31,6 +32,7 @@ namespace UniversityClinicHospitals
             do
             {
                 Console.WriteLine("University Clinic Hostpitals\n\n\t" +
+
                     "1. Employee Information\n\t" +
                     "2. Issue Paycheck\n\t" +
                     "3. Have Nurse or Doctor Draw Blood");
@@ -38,11 +40,13 @@ namespace UniversityClinicHospitals
                 string userInput = Console.ReadLine();
                 
                 switch (userInput)
+
                 {
                     case "1":
                         {
                             Console.Clear();
                             Console.WriteLine("\n\tName:" + "\tI.D.:" + "\tAdditional Info:\n\t");
+
                             Phil.DisplayInfo();
                             Jackie.DisplayInfo();
                             Cheryl.DisplayInfo();
@@ -55,6 +59,7 @@ namespace UniversityClinicHospitals
                         break;
 
                     case "2":
+
                         {
                             Console.Clear();
                             Console.WriteLine("Payment Information:\n");
@@ -66,6 +71,8 @@ namespace UniversityClinicHospitals
                             Console.ReadKey();
                             Console.Clear();
                         }
+                        Console.WriteLine("\nAll employees have been paid! Press any key to return to the main menu.");
+                        Console.ReadKey();
                         break;
 
                     case "3":
@@ -97,15 +104,18 @@ namespace UniversityClinicHospitals
                                     Console.WriteLine("Please choose an option from the menu.");
                             break;
                             }
+
                         break;
                         }
                         
 
                     default:
+
                         Console.WriteLine("Please choose an option from the menu.");
                         break;
                 }
             } while (running); 
+
 
             
 
