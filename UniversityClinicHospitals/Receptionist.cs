@@ -41,7 +41,7 @@ namespace UniversityClinicHospitals
                 else
                 {phones = "Not On Phones";}
 
-                Console.WriteLine(EmpName + " " + EmpNumber + " " + phones + " " + paid);
+                Console.WriteLine("\t" + EmpName + "\t" + EmpNumber + "\t" + phones + "\t\t" + paid);
                 }
             }
     }

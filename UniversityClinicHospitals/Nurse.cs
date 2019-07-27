@@ -44,7 +44,7 @@ namespace UniversityClinicHospitals
                 else
                 { paid = "no"; }
 
-                Console.WriteLine(EmpName + " " + EmpNumber + " " + NumAssignedPatients + " " + paid);
+                Console.WriteLine("\t" + EmpName + "\t" + EmpNumber + "\t" + NumAssignedPatients + "\t\t\t" + paid);
                 }
             }
     }

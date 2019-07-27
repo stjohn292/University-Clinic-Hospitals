@@ -42,7 +42,7 @@ namespace UniversityClinicHospitals
                 else
                 { sweeping = "Not Sweeping"; }
 
-                Console.WriteLine(EmpName + " " + EmpNumber + " " + sweeping + " " + paid);
+                Console.WriteLine("\t" + EmpName + "\t" + EmpNumber + "\t" + sweeping + "\t\t" + paid);
                 }
             }
     }

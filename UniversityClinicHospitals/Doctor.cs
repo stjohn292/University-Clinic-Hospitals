@@ -50,7 +50,7 @@ namespace UniversityClinicHospitals
            else
            { paid = "no"; }
             
-           Console.WriteLine(EmpName + " " + EmpNumber + " " + SpecialtyArea + " " + paid);
+           Console.WriteLine("\t" + EmpName + "\t" + EmpNumber + "\t" + SpecialtyArea + "\t\t\t" + paid);
         }
             
     }

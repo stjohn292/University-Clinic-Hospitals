@@ -18,7 +18,7 @@ namespace UniversityClinicHospitals
 
             Doctor Phil = new Doctor("Phil", 111, "Brain");
             Nurse Jackie = new Nurse("Jackie", 112, 50);
-            Receptionist Cheryl = new Receptionist("Cheryl/Carol...Crystal?", 112, true);
+            Receptionist Cheryl = new Receptionist("Cheryl", 112, true);
             Janitor Will = new Janitor("Will", 113, false);
             Patient patient = new Patient("John");
 
@@ -31,7 +31,7 @@ namespace UniversityClinicHospitals
 
             do
             {
-                Console.WriteLine("University Clinic Hostpitals\n\n\t" +
+                Console.WriteLine("University Clinic Hospitals\n\n\t" +
 
                     "1. Employee Information\n\t" +
                     "2. Issue Paycheck\n\t" +
@@ -45,7 +45,7 @@ namespace UniversityClinicHospitals
                     case "1":
                         {
                             Console.Clear();
-                            Console.WriteLine("\n\tName:" + "\tI.D.:" + "\tAdditional Info:\n\t");
+                            Console.WriteLine("\n\tName:" + "\tI.D.:" + "\tAdditional Info:" + "\tPayment Received?\n\t");
 
                             Phil.DisplayInfo();
                             Jackie.DisplayInfo();
